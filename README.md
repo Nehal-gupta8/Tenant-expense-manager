@@ -1,12 +1,46 @@
-# React + Vite
+A modern web application for property managers to track tenants, bills, and payments with real-time statistics.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Link - https://tenant-expense-manager.vercel.app/
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Tenant Management**
+  - Add/edit/delete tenant records
+  - Track lease details and contact information
+  - Store emergency contacts
+- **Bill Tracking**
+  - Create bills for rent, utilities, maintenance
+  - Track payment status (paid/pending/overdue)
+  - Record payment dates
+- **Dashboard**
+  - Real-time occupancy statistics
+  - Monthly revenue tracking
+  - Pending bills overview
+- **Responsive Design**
+  - Works on desktop and mobile devices
+  - Modern UI with dark/light mode support
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Frontend:
+  - React 18
+  - Vite (Build Tool)
+  - React Router 6
+  - Lucide React (Icons)
+- Styling:
+  - CSS Modules
+  - Flexbox/Grid Layouts
+- State Management:
+  - React Hooks
+  - Local Storage Persistence
+
+## Installation
+
+1. Clone the repository:
+   git clone https://github.com/your-username/tenant-management-system.git
+   cd tenant-management-system
+2. Install dependencies:
+   npm install
+3. Start the development server:
+   npm run dev
+   
