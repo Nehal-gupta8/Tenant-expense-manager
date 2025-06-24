@@ -1,0 +1,304 @@
+/* src/pages/Dashboard.css */
+.dashboard-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Activity Grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* Recent Tenants */
+.recent-tenants .tenant-card {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.recent-tenants .tenant-card:last-child {
+  border-bottom: none;
+}
+
+.tenant-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.tenant-info {
+  flex: 1;
+}
+
+.tenant-name {
+  font-weight: 500;
+  color: #111827;
+}
+
+.tenant-details {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.tenant-status {
+  margin-left: 1rem;
+}
+
+/* Quick Actions */
+.action-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #f9fafb;
+  transition: background-color 0.2s;
+}
+
+.action-button:hover {
+  background-color: #f3f4f6;
+}
+
+.action-button span {
+  margin-left: 0.75rem;
+  font-weight: 500;
+}
+
+.action-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-icon.blue {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.action-icon.green {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.action-icon.purple {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+.action-icon.amber {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+/* Outstanding Bills */
+.bills-table {
+  overflow-x: auto;
+}
+
+.bills-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bills-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+  background-color: #f9fafb;
+}
+
+.bills-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+}
+
+.bills-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tenant-cell {
+  display: flex;
+  align-items: center;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.active-badge {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.inactive-badge {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.paid-badge {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.pending-badge {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.overdue-badge {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.neutral-badge {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+/* Empty State */
+.empty-state {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #111827;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 1rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .modal-content {
+    margin: 0 1rem;
+  }
+}

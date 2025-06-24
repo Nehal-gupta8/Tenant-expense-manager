@@ -1,0 +1,293 @@
+/* Tenants Page Layout */
+
+
+/* Add these styles to your Tenants.css */
+
+/* Modal Overlay - Makes it cover entire screen and centers content */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center; /* Vertical centering */
+  justify-content: center; /* Horizontal centering */
+  z-index: 1000; /* Ensure it's above other content */
+  padding: 1rem; /* Prevents touching screen edges on mobile */
+}
+
+/* Modal Container - Sets max dimensions and centers content */
+.modal {
+  background: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 600px; /* Or your preferred max width */
+  max-height: 100vh; /* Prevents modal from being too tall */
+  overflow-y: auto; /* Allows scrolling if content is long */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Additional centering */
+}
+
+/* For smaller modals like delete confirmation */
+.confirmation-modal {
+  max-width: 400px; /* Narrower for confirmation dialogs */
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.tenants-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tenants-container {
+  padding: 20px;
+  flex: 1;
+}
+
+.tenants-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Table Styles */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.tenants-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tenants-table th {
+  background-color: #f8f9fa;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.tenants-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e9ecef;
+  vertical-align: middle;
+}
+
+.tenants-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Tenant Info */
+.tenant-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tenant-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #495057;
+}
+
+.tenant-name {
+  font-weight: 500;
+  color: #212529;
+}
+
+.tenant-phone,
+.tenant-email {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.icon-button.view {
+  background-color: #e7f5ff;
+  color: #228be6;
+}
+
+.icon-button.edit {
+  background-color: #fff4e6;
+  color: #fd7e14;
+}
+
+.icon-button.delete {
+  background-color: #fff5f5;
+  color: #fa5252;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
+
+/* Status Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.active-badge {
+  background-color: #ebfbee;
+  color: #2b8a3e;
+}
+
+.inactive-badge {
+  background-color: #fff5f5;
+  color: #c92a2a;
+}
+
+/* Empty State */
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.confirmation-modal {
+  max-width: 400px;
+}
+
+.modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Detail View */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item strong {
+  color: #495057;
+  font-size: 0.875rem;
+}
+
+.detail-item span {
+  color: #212529;
+  font-size: 1rem;
+}
+
+.detail-section {
+  margin-top: 20px;
+}
+
+.detail-section h4 {
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn.secondary {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.btn.danger {
+  background-color: #fa5252;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

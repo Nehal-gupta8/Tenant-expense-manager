@@ -1,0 +1,98 @@
+/* src/components/StatsCard.css */
+.stats-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+.icon-container {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container.blue {
+  background-color: #dbeafe;
+}
+
+.icon-container.green {
+  background-color: #dcfce7;
+}
+
+.icon-container.amber {
+  background-color: #fef3c7;
+}
+
+.icon-container.purple {
+  background-color: #ede9fe;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon.blue {
+  color: #3b82f6;
+}
+
+.icon.green {
+  color: #22c55e;
+}
+
+.icon.amber {
+  color: #f59e0b;
+}
+
+.icon.purple {
+  color: #8b5cf6;
+}
+
+.change {
+  margin-top: 1rem;
+}
+
+.change-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.change-text.positive {
+  color: #22c55e;
+}
+
+.change-text.negative {
+  color: #ef4444;
+}
+
+.change-text.neutral {
+  color: #64748b;
+}
